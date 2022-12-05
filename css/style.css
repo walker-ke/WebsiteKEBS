@@ -1,0 +1,46 @@
+body
+{
+	
+	/*padding: 20px;
+	*/
+}
+.top img
+{
+width:100px;
+height: 100px;
+vertical-align: center;
+}
+.top h1
+{
+	color: #000;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.main
+{
+	
+	height:auto;
+	padding: 10px;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 49%;
+    color: #000;
+}
+h1.tab 
+{
+	text-align: center;
+	margin-top: 10px;
+}
+
+.prof h2
+{
+	font-size: 15px;
+	color: #000;
+	font-weight: bold;
+}
