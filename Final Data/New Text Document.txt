@@ -1,0 +1,7 @@
+PROTOCOL: FTP
+HOST: waws-prod-am2-209.ftp.azurewebsites.windows.net
+
+LOG ON TYPE: Normal
+USER: kebsite\$kebsite
+
+Password: nLCoqmQHQQB72czMWltN9Wbd9AWDuJPwqh365xFgWDycninY2mMQwrh1BD6W
