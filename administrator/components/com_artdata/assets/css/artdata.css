@@ -1,0 +1,73 @@
+.art-data-body {width:100%;} /*margin-top:60px;*/
+.art-data-body-preview {padding-left:20px;padding-right:20px;}
+
+.art-data-accordion {}
+.art-data-accordion-title {
+	margin-top: 0px;
+	margin-bottom: 15px;
+	padding: 5px 15px;
+	background: #F5F5F5 none repeat scroll 0% 0%;
+	font-size: 18px;
+	line-height: 24px;
+	cursor: pointer;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+}
+
+.art-data-colorpicker-container {width:120px;display:block;margin:0 auto;}
+
+.subhead-collapse.collapse {  
+	position: fixed;
+	right: 0px;
+	left: 0px;
+	/*z-index: 1030;*/
+}
+
+/*remove joomla toolbar subhead*/
+/*.subhead-collapse.collapse { display:none !important; } 
+#system-message-container {margin-top:20px;} */
+.icon-visualizations { display:none !important; }
+.icon-templates { display:none !important; }
+
+.art-data-admin-menu {
+	background: #F5F5F5 none repeat scroll 0% 0%;
+	border-bottom: 1px solid #E3E3E3;
+	color: #0C192E;
+	text-shadow: 0px 1px 0px #FFF;
+	margin-bottom: 10px;
+	width:100%;
+	min-height: 43px;
+}
+
+/*.uk-modal {margin-top:50px;}*/
+
+.cm-s-default {border: 1px solid #DDD;}
+.art-data-form-heading {
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:5px;
+	margin-bottom:20px;
+	margin-top:10px;
+	/*border-top: 1px solid #DDD;*/
+	border-bottom: 1px solid #DDD;
+	font-weight:bold;
+}
+.art-data-square-palette-item {
+	border: 1px solid #DDD;
+	margin:5px;
+	float:left;
+	height:10px;
+	width:10px;
+}
+
+.art-data-green {
+	color: #8cc14c !important;
+}
+
+.art-data-red {
+	color: #da314b !important;
+}
+
+.header { display:none; }
+
+#content { margin-top: 65px; }
