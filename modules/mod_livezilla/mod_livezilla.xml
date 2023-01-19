@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>LiveZilla AJAX Status (free version)</name>
+	<author>StergiosZ| Web-expert.gr</author>
+	<creationDate>August 2009</creationDate>
+	<copyright>Copyright (C) 2010 - Web-Expert.gr</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>info@web-expert.gr</authorEmail>
+	<authorUrl>www.web-expert.gr</authorUrl>
+	<version>1.1</version>
+	<description><![CDATA[
+	Livezilla on/offline display images with AJAX refresh status
+	http://www.web-expert.gr (Free version).<br/><h3><b>Would you like to get the <font color="red">PRO</font> version? See more here <a href="http://web-expert.gr/commersial/livezilla-ajax-status-joomla">Pro Version Now...</a></b></h3>
+	]]>
+	</description>
+	<files>
+		<filename module="mod_livezilla">mod_livezilla.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="folder" type="text" default="livezilla" label="Installed Folder" description="Livezilla Installed Folder" />
+				<field name="width" type="text" default="600" label="PopUp Width" description="Livezilla window PopUp Width" />
+				<field name="height" type="text" default="550" label="PopUp Height" description="Livezilla window PopUp Height" />
+				<field name="imageset" type="text" default="01" label="ImageSet No" description="ImageSet number,you can see from Livezilla admin-link generator" />
+				<field name="imagew" type="text" default="180" label="Image Width" description="Livezilla image Width" />
+				<field name="imageh" type="text" default="45" label="Image Height" description="Livezilla image Height" />
+				<field name="tracking" type="radio" default="1" label="Tracking Code" description="Enable tracking code to see realtime visitors">
+					<option value="1">Enable</option>
+					<option value="0">Disable</option>
+				</field>
+				<field name="rads" type="list" default="30" label="Refresh Time" description="Refresh Time select from list">
+					<option value="30">30 Seconds</option>
+					<option value="40">40 Seconds</option>
+					<option value="60">60 Seconds</option>
+					<option value="70">70 Seconds</option>
+				</field>
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class" description="module class sfx" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
