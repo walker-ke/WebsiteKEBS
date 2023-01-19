@@ -1,0 +1,35 @@
+<html>
+<head>
+
+<script src="libraries/jquery/jquery.js"></script>
+<script>
+jQuery(document).ready(function($) {
+
+	// cache the body element
+	var body = $('body');
+
+	/*
+	  Create a "bodyQueue" queue for the body element and add a function into it.
+	  After this funnction runs it will delay the "bodyQueue" queue by 5 seconds.
+          None of the functions are run until an event triggers the dequeue() method.
+          This event is defined at the end using a click on the body.
+	*/
+	var res = body.queue('bodyQueue', function(){ 
+	    console.log('1');
+	    body.dequeue('bodyQueue');
+	});
+ 
+	res.delay(1000, 'bodyQueue').queue('bodyQueue', function(){ 
+	    console.log('2');
+	}) ; 
+	// Add an event to fire the "bodyQueue" queue
+	body.click(function(){ 
+	    // Run everything in the "bodyQueue" queue
+	    body.dequeue('bodyQueue'); 
+	});
+
+});
+</script>
+</head>
+<body></body>
+</html>

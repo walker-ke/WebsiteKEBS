@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+<name>Art Data Plugin</name>
+<author>artetics.com</author>
+<creationDate>2016-03-15</creationDate>
+<copyright>Copyright (C) 2016 artetics.com. All rights reserved.</copyright>
+<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+<authorEmail>info@artetics.com</authorEmail>
+<authorUrl>www.artetics.com</authorUrl>
+<version>2.2.9</version>
+<description><![CDATA[Art Data Plugin allows you to display various types of data visualizations by using a plugin shortcode such as: [artdata id="1"]
+<br /><br /><br />&copy;&nbsp;<a href="http://www.artetics.com">Artetics.com</a>]]></description>
+<files>
+	<filename plugin="artdata">artdata.php</filename>
+</files>
+</extension>

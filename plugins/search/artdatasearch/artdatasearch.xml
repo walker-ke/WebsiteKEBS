@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="search" method="upgrade">
+	<name>Art Data Search</name>
+	<creationDate>2013-12-17</creationDate>
+	<version>2.2.8</version>
+	<copyright>Artetics (C) 2016, All rights reserved.</copyright>
+    	<license>GNU General Public License</license>
+	<author>Mike Hill</author>
+	<authorEmail>info@artetics.com</authorEmail>
+	<authorUrl>http://artetics.com/</authorUrl>
+	<description>Search Art Data Visualizations in the main default joomla site search.</description>
+	<files>
+		<filename plugin="artdatasearch">artdatasearch.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<!-- These files will be installed in the administrator/language folder. -->
+	</languages>
+</extension>

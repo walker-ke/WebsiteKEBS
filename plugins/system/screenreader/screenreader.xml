@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+	<name>System - Screen Reader</name>
+	<author>Joomla! Extensions Store</author>
+	<creationDate>June 2016</creationDate>
+	<copyright>Copyright (C) 2016 - Joomla! Extensions Store. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@storejextensions.org</authorEmail>
+	<authorUrl>http://storejextensions.org</authorUrl>
+	<version>3.10</version>
+	<description>SCREENREADER_DESCRIPTION</description>
+	<files>
+		<filename plugin="screenreader">screenreader.php</filename>
+		<filename>index.html</filename>
+		<folder>screenreader</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_screenreader.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_screenreader.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic"
+				addfieldpath="/plugins/system/screenreader/screenreader/libraries/fields">
+				<field name="@spacer1" type="spacer" label="AUDIO_SETTINGS" />
+				<field name="volume_tts" type="list" default="80" label="VOLUME"
+					description="VOLUME DESC">
+					<option value="20">20%</option>
+					<option value="40">40%</option>
+					<option value="60">60%</option>
+					<option value="80">80%</option>
+					<option value="100">100%</option>
+				</field>
+				<field name="read_page" type="list" default="1" label="READER_MODE"
+					description="READER_MODE_DESC">
+					<option value="0">SELECTED_TEXT_ONLY</option>
+					<option value="1">MAINPAGE_PART_AND_SELECTED_TEXT</option>
+				</field>
+				<field name="read_child_nodes" type="list" default="1"
+					label="READER_CHILD_NODES" description="READER_CHILD_NODES_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="exclude_scripts" type="list" default="1"
+					label="READER_EXCLUDE_SCRIPTS" description="READER_EXCLUDE_SCRIPTS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="read_images" type="list" default="0"
+					label="READER_READ_IMAGES" description="READER_READ_IMAGES_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="read_images_attribute" type="list" default="alt"
+					label="READER_READ_IMAGES_ATTRIBUTE" description="READER_READ_IMAGES_ATTRIBUTE_DESC">
+					<option value="alt">READER_ALT</option>
+					<option value="title">READER_TITLE</option>
+				</field>
+				<field name="read_images_ordering" type="list" default="before"
+					label="READER_READ_IMAGES_ORDERING" description="READER_READ_IMAGES_ORDERING_DESC">
+					<option value="before">READER_BEFORE</option>
+					<option value="after">READER_AFTER</option>
+				</field>
+
+				<field name="mainpage_selector" type="text"
+					default="*[name*=main], *[class*=main], *[id*=main], *[id*=container], *[class*=container]"
+					size="100" label="MAINPAGE_SELECTOR" description="MAINPAGE_SELECTOR_DESC" />
+				<field name="chunksize" type="list" default="100" label="CHUNKSIZE" description="CHUNKSIZE_DESC">
+					<option value="20">20</option>
+					<option value="40">40</option>
+					<option value="60">60</option>
+					<option value="80">80</option>
+					<option value="90">90</option>
+					<option value="100">100</option>
+					<option value="120">120</option>
+					<option value="140">140</option>
+					<option value="160">160</option>
+					<option value="180">180</option>
+					<option value="200">200</option>
+					<option value="240">240</option>
+					<option value="280">280</option>
+					<option value="300">300</option>
+					<option value="400">400</option>
+					<option value="500">500</option>
+					<option value="600">600</option>
+					<option value="700">700</option>
+					<option value="800">800</option>
+					<option value="900">900</option>
+					<option value="1000">1000</option>
+				</field>
+
+				<field name="@spacer2" type="spacer" label="APPEARANCE" />
+				<field name="showlabel" type="radio" class="btn-group"
+					default="1" label="SCR_SHOWLABEL" description="SCR_SHOWLABEL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="screenreader" type="radio" class="btn-group" default="1"
+					label="SCR_SCREENREADER" description="SCR_SCREENREADER_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="fontsize" type="radio" class="btn-group" default="1"
+					label="SCR_FONTSIZE" description="SCR_FONTSIZE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="highcontrast" type="radio" class="btn-group"
+					default="1" label="SCR_HIGHCONTRAST" description="SCR_HIGHCONTRAST_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="highcontrast_alternate" type="radio" class="btn-group"
+					default="1" label="SCR_HIGHCONTRAST_ALTERNATE" description="SCR_HIGHCONTRAST_ALTERNATE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="dyslexic_font" type="radio" class="btn-group"
+					default="1" label="SCR_DYSLEXIC_FONT" description="SCR_DYSLEXIC_FONT_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="highcontrast_alternate_color_hue" type="list" default="180" label="SCR_HIGHCONTRAST_ALTERNATE_COLOR_HUE" description="SCR_HIGHCONTRAST_ALTERNATE_COLOR_HUE_DESC">
+					<option value="45">SCR_FONTSIZE_VERYLOW</option>
+					<option value="90">SCR_FONTSIZE_LOW</option>
+					<option value="180">SCR_FONTSIZE_MEDIUM</option>
+					<option value="225">SCR_FONTSIZE_AVERAGE</option>
+					<option value="270">SCR_FONTSIZE_HIGH</option>
+					<option value="305">SCR_FONTSIZE_VERYHIGH</option>
+				</field>
+				<field name="highcontrast_alternate_color_brightness" type="list" default="6" label="SCR_HIGHCONTRAST_ALTERNATE_BRIGHTNESS" description="SCR_HIGHCONTRAST_ALTERNATE_BRIGHTNESS_DESC">
+					<option value="2">SCR_FONTSIZE_VERYLOW</option>
+					<option value="4">SCR_FONTSIZE_LOW</option>
+					<option value="6">SCR_FONTSIZE_AVERAGE</option>
+					<option value="8">SCR_FONTSIZE_HIGH</option>
+					<option value="10">SCR_FONTSIZE_VERYHIGH</option>
+				</field>
+				
+				<field name="font_size_default" type="text" default="80" size="30" label="SCR_FONTSIZE_DEFAULT" description="SCR_FONTSIZE_DEFAULT_DESC" />
+				<field name="font_size_min" type="text" default="50" size="30" label="SCR_FONTSIZE_MINVAL" description="SCR_FONTSIZE_MINVAL_DESC" />
+				<field name="font_size_max" type="text" default="200" size="30" label="SCR_FONTSIZE_MAXVAL" description="SCR_FONTSIZE_MAXVAL_DESC" />
+				<field name="fontsize_selector" type="text" default="" size="100" label="SCR_FONTSIZE_SELECTOR" description="SCR_FONTSIZE_SELECTOR_DESC" />
+					
+				<field name="fontsize_selector_mode" type="radio" class="btn-group" default="1" 
+					label="SCR_FONTSIZE_SELECTOR_MODE" description="SCR_FONTSIZE_SELECTOR_MODE_DESC">
+					<option value="0">SCR_APPEND</option>
+					<option value="1">SCR_OVERRIDE</option>
+				</field>
+				<field name="fontsize_headers_increment" type="text" default="20" size="30" label="SCR_FONTSIZE_HEADERS_INCREMENENT" description="SCR_FONTSIZE_HEADERS_INCREMENENT_DESC" />
+
+				<field name="corner_position" type="list" default="bottomright"
+					label="POSITION_CORNER" description="POSITION_CORNER_DESC">
+					<option value="topright">TOP_RIGHT</option>
+					<option value="bottomright">BOTTOM_RIGHT</option>
+					<option value="topleft">TOP_LEFT</option>
+					<option value="bottomleft">BOTTOM_LEFT</option>
+				</field>
+
+				<field name="template" type="list" default="main.css" label="TEMPLATE_BUTTONS"
+					description="TEMPLATE_BUTTONS_DESC">
+					<option value="main.css">MAIN_TEMPLATE</option>
+					<option value="elegant.css">ELEGANT_TEMPLATE</option>
+					<option value="custom.css">CUSTOM_TEMPLATE</option>
+				</field>
+
+				<field name="toolbar_bgcolor" type="color" default="#EEE"
+					label="SCR_BGCOLOR" description="SCR_BGCOLOR_DESC" />
+
+				<field name="scrolling" type="list" default="fixed" label="SCROLLING"
+					description="SCROLLING_DESC">
+					<option value="fixed">FIXED_IMAGE</option>
+					<option value="absolute">SCROLLING_IMAGE</option>
+					<option value="relative">RELATIVE_IMAGE</option>
+				</field>
+				
+				<field name="target_appendto" type="text" default="html" size="30"
+					label="SCR_TARGET_APPENDTO" description="SCR_TARGET_APPENDTO_DESC" />
+					
+				<field name="target_append_mode" type="list" default="bottom" label="SCR_TARGET_APPENDTO_MODE"
+					description="SCR_TARGET_APPENDTO_MODE_DESC">
+					<option value="top">SCR_TARGET_APPENDTO_MODE_TOP</option>
+					<option value="bottom">SCR_TARGET_APPENDTO_MODE_BOTTOM</option>
+				</field>
+				<field name="use_minimized_toolbar" type="radio" default="0" class="btn-group" label="SCR_USEMINIMIZEDTOOLBAR" description="SCR_USEMINIMIZEDTOOLBAR_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="hide_on_mobile" type="radio" default="0" class="btn-group" label="SCR_HIDEONMOBILE" description="SCR_HIDEONMOBILE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="@spacer3" type="spacer" label="ACCESSIBILITY_IMPROVEMENTS" />
+				<field name="show_skip_to_contents" type="radio" default="0" class="btn-group" label="SCR_SHOW_SKIP_TO_CONTENTS" description="SCR_SHOW_SKIP_TO_CONTENTS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="skiptocontents_selector" type="text" default="" size="100" label="SCR_SHOW_SKIP_TO_CONTENTS_SELECTOR" description="SCR_SHOW_SKIP_TO_CONTENTS_SELECTOR_DESC" />
+				
+				<field name="enable_focus_outline" type="radio" default="0" class="btn-group" label="SCR_ENABLE_FOCUS_OUTLINE" description="SCR_ENABLE_FOCUS_OUTLINE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="enable_focus_outline_color" type="color" default="#F00" label="SCR_ENABLE_FOCUS_OUTLINE_COLOR" description="SCR_ENABLE_FOCUS_OUTLINE_COLOR_DESC" />
+				<field name="enable_focus_outline_bordersize" type="list" default="2px" label="SCR_ENABLE_FOCUS_OUTLINE_BORDERSIZE" description="SCR_ENABLE_FOCUS_OUTLINE_BORDERSIZE_DESC">
+					<option value="1px">SCR_FOCUS_OUTLINE_BORDER_SIZE_1PX</option>
+					<option value="2px">SCR_FOCUS_OUTLINE_BORDER_SIZE_2PX</option>
+					<option value="3px">SCR_FOCUS_OUTLINE_BORDER_SIZE_3PX</option>
+					<option value="4px">SCR_FOCUS_OUTLINE_BORDER_SIZE_4PX</option>
+				</field>
+				<field name="remove_links_target" type="radio" default="0" class="btn-group" label="SCR_REMOVE_LINKS_TARGET" description="SCR_REMOVE_LINKS_TARGET_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			
+				<field name="@spacer4" type="spacer" label="MISC" />
+				<field name="screenreader_exclusions" type="menumultiselect"
+					default="0" size="20" multiple="multiple" label="SCR_EXCLUSIONS"
+					description="SCR_EXCLUSIONS_DESC" />
+				<field name="auto_background_color" type="radio" default="1" class="btn-group"
+					label="SCR_AUTO_BACKGROUND_COLOR" description="SCR_AUTO_BACKGROUND_COLOR_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="jquery_include" type="radio" default="1" class="btn-group"
+					label="JQUERY_INCLUDE" description="JQUERY_INCLUDE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="preload" type="radio" default="0" label="ENABLE_PRELOAD" class="btn-group"
+					description="ENABLE_PRELOAD_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="ie_highcontrast" type="radio" class="btn-group"
+					default="1" label="IE_HIGHCONTRAST_MODE" description="IE_HIGHCONTRAST_MODE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="ie_highcontrast_advanced" type="radio" class="btn-group"
+					default="1" label="IE_HIGHCONTRAST_ADVANCED" description="IE_HIGHCONTRAST_ADVANCED_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="force_jquery_deferred" type="radio" default="0" class="btn-group"
+					label="SCR_FORCE_JQUERY_DEFERRED" description="SCR_FORCE_JQUERY_DEFERRED_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="script_loading" type="list" default="deferred" label="SCR_SCRIPT_LOADING"
+					description="SCR_SCRIPT_LOADING_DESC">
+					<option value="deferred">SCR_SCRIPT_LOADING_DEFERRED</option>
+					<option value="dom">SCR_SCRIPT_LOADING_DOM</option>
+				</field>
+				
+				<field name="sef_lang_code" type="radio" default="1" class="btn-group"
+					label="SCR_SEF_LANG_CODE" description="SCR_SEF_LANG_CODE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="reader_engine" type="list" default="proxy_virtual" class="btn-group" label="SCR_READER_ENGINE" description="SCR_READER_ENGINE_DESC">
+					<option value="proxy_virtual">SCR_READER_ENGINE_VIRTUALSPEAKER</option>
+					<option value="proxy_responsive">SCR_READER_ENGINE_RESPONSIVEVOICE</option>
+					<option value="proxy_fallback">SCR_READER_ENGINE_NATURALREADERS</option>
+					<option value="proxy">SCR_READER_ENGINE_GOOGLE</option>
+				</field>
+				<field name="script_responsivevoice_loading" type="list" default="local" label="SCR_RESPONSIVEVOICE_SCRIPTLOADING" description="SCR_RESPONSIVEVOICE_SCRIPTLOADING_DESC">
+					<option value="local">SCR_SCRIPT_LOADING_LOCAL_SERVER</option>
+					<option value="remote">SCR_SCRIPT_LOADING_REMOTE_SERVER</option>
+				</field>
+				<field name="engine_google_token_mode" type="list" default="0" label="SCR_RESPONSIVEVOICE_GOOGLE_TOKEN_MODE" description="SCR_RESPONSIVEVOICE_GOOGLE_TOKEN_MODE_DESC">
+					<option value="0">SCR_READER_ENGINE_GOOGLE_STATIC</option>
+					<option value="1">SCR_READER_ENGINE_GOOGLE_DYNAMIC</option>
+				</field>
+				<field name="reader_connection_usesockets" type="list" default="1" label="SCR_RESPONSIVEVOICE_READER_CONNECTION_USESOCKETS" description="SCR_RESPONSIVEVOICE_READER_CONNECTION_USESOCKETS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="excluded_languages" type="language" multiple="multiple" default="" class="btn-group" label="SCR_EXCLUDE_LANGUAGES" description="SCR_EXCLUDE_LANGUAGES_DESC"/>
+				
+				<field name="use_mobile_reader_engine" type="radio" default="0" class="btn-group"
+					label="SCR_USE_MOBILE_READER_ENGINE" description="SCR_USE_MOBILE_READER_ENGINE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="mobile_reader_engine" type="list" default="proxy_virtual" class="btn-group" label="SCR_MOBILE_READER_ENGINE" description="SCR_MOBILE_READER_ENGINE_DESC">
+					<option value="proxy_virtual">SCR_READER_ENGINE_VIRTUALSPEAKER</option>
+					<option value="proxy_responsive">SCR_READER_ENGINE_RESPONSIVEVOICE</option>
+					<option value="proxy_fallback">SCR_READER_ENGINE_NATURALREADERS</option>
+					<option value="proxy">SCR_READER_ENGINE_GOOGLE</option>
+				</field>
+				
+				<field name="@spacer5" type="spacer" label="SCR_ACCESSKEYS" />
+				<field name="accesskey_play" type="text" default="P" size="30" filter="cmd" maxlength="1"
+					label="SCR_ACCESSKEY_PLAY" description="SCR_ACCESSKEY_DESC" />
+					
+				<field name="accesskey_pause" type="text" default="E" size="30" filter="cmd" maxlength="1"
+					label="SCR_ACCESSKEY_PAUSE" description="SCR_ACCESSKEY_DESC" />
+				<field name="accesskey_stop" type="text" default="S" size="30" filter="cmd" maxlength="1"
+					label="SCR_ACCESSKEY_STOP" description="SCR_ACCESSKEY_DESC" />
+				<field name="accesskey_increase" type="text" default="O" size="30" filter="cmd" maxlength="1"
+					label="SCR_ACCESSKEY_INCREASE" description="SCR_ACCESSKEY_DESC" />
+				<field name="accesskey_decrease" type="text" default="U" size="30" filter="cmd" maxlength="1"
+					label="SCR_ACCESSKEY_DECREASE" description="SCR_ACCESSKEY_DESC" />
+				<field name="accesskey_reset" type="text" default="R" size="30" filter="cmd" maxlength="1"
+					label="SCR_ACCESSKEY_RESET" description="SCR_ACCESSKEY_DESC" />
+				<field name="accesskey_highcontrast" type="text" default="H" size="30" filter="cmd" maxlength="1"
+					label="SCR_ACCESSKEY_HIGHCONTRAST" description="SCR_ACCESSKEY_DESC" />
+				<field name="accesskey_highcontrast2" type="text" default="J" size="30" filter="cmd" maxlength="1"
+					label="SCR_ACCESSKEY_HIGHCONTRAST2" description="SCR_ACCESSKEY_DESC" />
+				<field name="accesskey_highcontrast3" type="text" default="K" size="30" filter="cmd" maxlength="1"
+					label="SCR_ACCESSKEY_HIGHCONTRAST3" description="SCR_ACCESSKEY_DESC" />
+				<field name="accesskey_dyslexicfont" type="text" default="D" size="30" filter="cmd" maxlength="1"
+					label="SCR_ACCESSKEY_DYSLEXICFONT" description="SCR_ACCESSKEY_DESC" />
+				<field name="accesskey_skiptocontents" type="text" default="C" size="30" filter="cmd" maxlength="1"
+					label="SCR_ACCESSKEY_SKIPTOCONTENTS" description="SCR_ACCESSKEY_DESC" />
+				<field name="accesskey_minimized" type="text" default="L" size="30" filter="cmd" maxlength="1"
+					label="SCR_ACCESSKEY_MINIMIZED_TOOLBAR" description="SCR_ACCESSKEY_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+	
+	<!-- UPDATE SERVERS -->
+	<updateservers>
+		<server type="extension" priority="1" name="Screen Reader Update Server">http://storejextensions.org/updates/screenreader_updater.xml</server>
+	</updateservers>
+</extension>
