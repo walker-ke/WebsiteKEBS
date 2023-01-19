@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>onWebChat</name>
+	<author> onWebChat.com</author>
+	<creationDate>June 2015</creationDate>
+	<copyright> onWebChat. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@onwebchat.com</authorEmail>
+	<authorUrl>www.onwebchat.com</authorUrl>
+	<version>1.1.0</version>
+	<description>Free Live Chat software for your website. Install it in less than a minute, and chat with your visitors!</description>
+	<files>
+		<filename plugin="onwebchat">onwebchat.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<updateservers>
+		<server type="extension" priority="1" name="onWebchat.com">http://www.onwebchat.com/updates/joomla_plg_onwebchat.xml</server>
+	</updateservers>
+	<scriptfile>script.php</scriptfile>
+	<config>
+		<fields name="params">
+			<fieldset name="Basic">
+                <field name="create-onwebchat-account" type="spacer" description=" " label="If you don't have an account on onWebChat live chat service create one &lt;a href='https://www.onwebchat.com/signup.php' target='_blank'&gt;here&lt;/a&gt;" />
+                <field name="install-onwebchat"  type="spacer" description=" " label="To install onWebChat on your Joomla site please insert the Chat ID to the following field."></field>
+                <field name="login-onwebchat"  type="spacer" description=" " label="You will find Chat Id in settings-page of onWebChat admin, login &lt;a href='https://www.onwebchat.com/login.php' target='_blank'&gt;here&lt;/a&gt;"></field>
+                <field name="customize-onwebchat" type="spacer" description=" " label="[You can customize chat widget appearance from settings admin page]"></field>
+				<field name="chatid" type="text" filter="string" default="" label="onWebChat ID" description="Please login to onwebchat.com and get your Chat Id" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
