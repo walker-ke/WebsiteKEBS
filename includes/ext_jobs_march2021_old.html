@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 100px;
+  padding-top:10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 0px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #fff;
+  width: 70%;
+  padding: 20px;
+}
+
+/* Fake image 2 */
+.fakeimg2 {
+  background-color: #fff;
+  width: 20%;
+  padding:10px;
+  
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 0px;
+}
+
+/* Add a table*/
+/*
+.table {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-bottom: 1px solid #ddd;
+  tr:nth-child(even) {background-color: #f2f2f2;}
+	
+}
+*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #336699;
+  color: white;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  margin-top: 20px;
+  margin-right:421px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<!--
+<div class="header">
+    <p>
+	<h2>
+		Job Advertisement 
+	</h2>
+	</p>
+</div>
+-->
+<div class="topnav">
+<!--
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" style="float:right">Link</a>
+-->
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+   <p style="font-size:10pt;word-wrap: break-word;">
+   <p align="center"><strong>VACANCY ANNOUNCMENT</strong></p>
+  <p align="justify">The Kenya Bureau of Standards (KEBS) is a statutory organization of the  Government of Kenya established by the Standards Act, Cap 496 of the laws of  Kenya in July 1974. The mandate of KEBS is to provide Standardization,  Metrology and Conformity Assessment services through promotion of standardization  in commerce and industry,&nbsp;provision of testing and calibration facilities,  control of the use of standardization marks,&nbsp;undertaking educational work  in standardization,&nbsp;facilitation of the implementation and practical  application of standards,&nbsp;maintenance and dissemination of the  International System of Units (SI) of&nbsp;measurements. <br />
+  
+KEBS wishes to recruit innovative and result  oriented individuals for the following positions. </p>
+<ol start="1" type="1" align="justify">
+  <li><b>Manager Positions (KS4)</b></li>
+   <li><b>Entry Positions (KS8, KS9, KS10)</b></li>
+</ol>
+<p align="justify"><strong>APPLICATION SUBMISSION</strong><br />
+The Application should include attachments of; <br />
+1. Cover Letter <br />
+2. Curriculum Vitae <br />
+3. Copies of Academic and Professional certificates<br />
+4. Certificate of Good Conduct from the Directorate of Criminal Investigations<br />
+5. Tax Compliance certificate from Kenya Revenue Authority (KRA)<br />
+6. Ethics and Anti-Corruption Commission Clearance (EACC)<br />
+7. Credit Reference Bureau clearance (CRB)<br />
+8. Clearance certificate from Higher Education Loans Board (HELB). <br />
+</p>
+  <p style="margin-top:-170px;">
+<table class="table" width="100%" border="1">
+  <tr>
+	<!-- <th scope="col"col width="10">Vacancy Number</th> -->
+    <th scope="col">Position</th>
+
+	<th scope="col"col width="10">Post</th>
+    <th scope="col" colspan="2">Job Description</th>
+  </tr>
+ <tr>
+ <td style="text-align:center;"colspan="4">
+ <b>Manager Positions</b>
+ </td>
+ </tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Measurement Technology & Technical Solution</td>
+	<td>1</td>
+    <td><a href="includes\Job_descriptions\JD 02.pdf" target="_blank">Open JD 02</a></td>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Pre - Export Verification of Conformity (PVoC)</td>
+    <td>1</td>
+    <td><a href="includes\Job_descriptions\JD 01.pdf" target="_blank">Open JD 01</a></td>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+ <tr>
+ <td style="text-align:center;" colspan="4">
+<b> Entry Level Positions</b>
+ </td>
+ </tr>
+  <tr>
+ <td style="text-align:center;"colspan="4" >
+ 
+<b>Degree Holders</b>
+ </td>
+ </tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Chemistry</td>
+	<td>7</td>
+    <td><a href="includes\Job_descriptions\JD 03.pdf" target="_blank">Open JD 03</a><br>
+	<a href="includes\Job_descriptions\JD 04.pdf" target="_blank">Open JD 04</a><br>
+	<a href="includes\Job_descriptions\JD 05.pdf" target="_blank">Open JD 05</a><br>
+	<a href="includes\Job_descriptions\JD 07.pdf" target="_blank">Open JD 07</a></td><br>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Civil Engineering</td>
+	<td>4</td>
+    <td><a href="includes\Job_descriptions\JD 03.pdf" target="_blank">Open JD 03</a><br>
+	<a href="includes\Job_descriptions\JD 05.pdf" target="_blank">Open JD 05</a></td><br>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Mechanical Engineering</td>
+	<td>5</td>
+    <td><a href="includes\Job_descriptions\JD 03.pdf" target="_blank">Open JD 03</a><br>
+	<a href="includes\Job_descriptions\JD 04.pdf" target="_blank">Open JD 04</a><br>
+	<a href="includes\Job_descriptions\JD 05.pdf" target="_blank">Open JD 05</a><br>
+	<a href="includes\Job_descriptions\JD 07.pdf" target="_blank">Open JD 07</a><br>
+	<a href="includes\Job_descriptions\JD 16.pdf" target="_blank">Open JD 16</a><br></td><br>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Electrical /Electronics Engineering</td>
+	<td>3</td>
+	<td><a href="includes\Job_descriptions\JD 05.pdf" target="_blank">Open JD 05</a><br>
+	<a href="includes\Job_descriptions\JD 16.pdf" target="_blank">Open JD 16</a><br></td><br>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Economics</td>
+    	<td>1</td>
+    <td><a href="includes\Job_descriptions\JD 07.pdf" target="_blank">Open JD 07</a></td>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Statistics</td>
+    	<td>1</td>
+    <td><a href="includes\Job_descriptions\JD 09.pdf" target="_blank">Open JD 09</a></td>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Food Science/Technology</td>
+ 	<td>9</td>
+    <td><a href="includes\Job_descriptions\JD 03.pdf" target="_blank">Open JD 03</a><br>
+	<a href="includes\Job_descriptions\JD 04.pdf" target="_blank">Open JD 04</a><br>
+	<a href="includes\Job_descriptions\JD 05.pdf" target="_blank">Open JD 05</a><br>
+	<a href="includes\Job_descriptions\JD 06.pdf" target="_blank">Open JD 06</a><br>
+	<a href="includes\Job_descriptions\JD 07.pdf" target="_blank">Open JD 07</a><br>
+	<a href="includes\Job_descriptions\JD 08.pdf" target="_blank">Open JD 08</a><br></td><br>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Microbiology/Applied Biology</td>
+   	<td>1</td>
+    <td><a href="includes\Job_descriptions\JD 06.pdf" target="_blank">Open JD 06</a></td>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Agriculture</td>
+    	<td>6</td>
+		<td><a href="includes\Job_descriptions\JD 03.pdf" target="_blank">Open JD 03</a><br>
+		<a href="includes\Job_descriptions\JD 05.pdf" target="_blank">Open JD 05</a><br>
+	<a href="includes\Job_descriptions\JD 06.pdf" target="_blank">Open JD 06</a><br>
+	<a href="includes\Job_descriptions\JD 07.pdf" target="_blank">Open JD 07</a><br></td><br>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Textile Engineering / Technology</td>
+	<td>2</td>
+    <td><a href="includes\Job_descriptions\JD 03.pdf" target="_blank">Open JD 03</a><br>
+	<a href="includes\Job_descriptions\JD 07.pdf" target="_blank">Open JD 07</a></td><br>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+ <td style="text-align:center;"colspan="4" >
+ 
+<b>Diploma holders</b>
+ </td>
+ </tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Electrical / Electronic Engineering (Heavy Current)</td>
+    	<td>4</td>
+    <td><a href="includes\Job_descriptions\JD 10.pdf" target="_blank">Open JD 10</a><br>
+	<a href="includes\Job_descriptions\JD 11.pdf" target="_blank">Open JD 11</a><br>
+	<a href="includes\Job_descriptions\JD 17.pdf" target="_blank">Open JD 17</a></td><br>
+	
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Food Science / Technology</td>
+    	<td>2</td>
+    <td><a href="includes\Job_descriptions\JD 10.pdf" target="_blank">Open JD 10</a></td>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Mechanical Engineering</td>
+ 	<td>2</td>
+    <td><a href="includes\Job_descriptions\JD 17.pdf" target="_blank">Open JD 17</a></td>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Microbiology / Applied Biology</td>
+	<td>1</td>
+    <td><a href="includes\Job_descriptions\JD 11.pdf" target="_blank">Open JD 11</a></td>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Publishing - Print Production</td>
+	<td>2</td>
+    <td><a href="includes\Job_descriptions\JD 12.pdf" target="_blank">Open JD 12</a></td>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Registered Nurse</td>
+    	<td>1</td>
+    <td><a href="includes\Job_descriptions\JD 14.pdf" target="_blank">Open JD 14</a></td>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Analytical Chemistry</td>
+   	<td>5</td>
+    <td><a href="includes\Job_descriptions\JD 10.pdf" target="_blank">Open JD 10</a><br>
+	<a href="includes\Job_descriptions\JD 11.pdf" target="_blank">Open JD 11</a></td><br>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Customer Care / Front Office</td>
+   	<td>2</td>
+    <td><a href="includes\Job_descriptions\JD 15.pdf" target="_blank">Open JD 15</a></td>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+ <td style="text-align:center;"colspan="4" >
+ 
+<b>Certificate Holders</b>
+ </td>
+ </tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Electrical / Electronic Engineering</td>
+    	<td>2</td>
+    <td><a href="includes\Job_descriptions\JD 13.pdf" target="_blank">Open JD 13</a></td>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Mechanical Engineering</td>
+    	<td>1</td>
+    <td><a href="includes\Job_descriptions\JD 13.pdf" target="_blank">Open JD 13</a></td>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+<tr>
+    <!-- <td>JD 001</td> -->
+    <td>Civil Engineering</td>
+   	<td>1</td>
+    <td><a href="includes\Job_descriptions\JD 13.pdf" target="_blank">Open JD 13</a></td>
+    <td><a href="https://www.kebs.org/index.php?option=com_breezingforms&view=form&Itemid=557" target="_blank">Apply Here</a></td>
+</tr>
+
+ </table> 
+ 	<div class="card">
+      <h2>Application submission</h2>
+       <p align="justify">
+	  Application form including testimonials shall be filled and submitted online via KEBS website <b>on or before 16th April, 2021</b>.All testimonials <b><u>MUST</u></B> be saved with 
+	  applicant's <b>ID.N0. e.g.20441558_CV.pdf.</b><p align="justify">
+	  <b><u>IMPORTANT NOTICE;</u></b> Upon successful upload and submission of application,the applicant will receive a system generated email notification
+	  that the job application details have been successfully submitted.<br></p>
+	  Persons with disability and female candidates are encouraged to apply. Academic qualifications of external origin<b><u>MUST</u></b> be accompanied with<br>
+	  a recognition certificate from relevant body.<p><b><i>only shortlisted candidates will be contacted.Canvassing will lead to automatic disqualification</i></b></p>
+	  </p>
+	  </p>
+ <p align="justify">
+	<b><i> All degree application for engineering related positions must be Registered as Graduate Engineers.</i></b></p>
+ </p>
+
+   </p>
+  </div>
+		<p align="center" style="font-size:8pt; color:grey;">
+		Copyright 2021 -- Kenya Bureau of Standards. </br>
+		All Rights Reserved.
+		</p>
+    </div>
+<!--
+	<div class="card">
+      <h2>Application submission</h2>
+      <p>
+	  Application form shall be filled and submitted online. Please ensure your documents are in <b>"PDF"</b> Format for proper submission. Testimonials shall also be submitted online Via KEBS intranet, <b>on or before 28th January, 2020</b>.
+	  </p>
+	  <p>
+	  Applicants are hereby guided that only those who meet the Job requirements as spelt out in the KEBS career guidelines to apply.
+	  </p>
+	  <p>
+	  Only shortlisted candidates will be contacted. Canvassing will lead to automatic disqualification.
+	  </p>
+	  <p>
+	  When uploading your documents, please ensure you name your documents starting with your ID Number e.g. <b>15112346 _CV.pdf</b>
+	  </p>
+    </div>
+-->
+  </div>
+
+  <div class="rightcolumn">
+    <div class="card">
+	<b><p align="left">Today's Date <span id="datetime"></span></p></b>
+     <script>
+		var dt = new Date();
+		document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+	</script> 	  
+	
+    </div>
+    </div>
+	
+	<div class="rightcolumn">
+    <div class="card">
+      <h2>Application Submission</h2>
+      <p>
+	  <!--
+	  Application form shall be filled and submitted online. Please ensure your documents are in <b>"PDF"</b> Format for proper submission. Testimonials shall also be submitted online Via KEBS intranet, <b style="color:red;">on or before 30th January, 2020 at 4.00pm</b>.
+		-->
+	 </p>
+	  <div>
+	  The application form, key responsibilities and job specification for the above positions must be received by</br> <b>16<sup>th</sup> April 2021</b>.
+	  </div>
+	  <p>
+	  NB: Any academic certificate from foreign Institutions MUST be accompanied with a recognition certificate from Commissioner of University Education, Kenya.
+	  </p>
+	  <p style="text-align:left;color:red;font-size:11pt;word-wrap: break-word;">
+		<b>Please ensure you have the following documents at hand for the application process.</b>
+	<p>
+	<p style="text-align:left;color:red;font-size:10pt;word-wrap: break-word;">
+<b>1. </b>ID & PIN Copies</br>
+<b>2. </b>Cover Letter </br>
+<b>3. </b>Curriculum Vitae</br>
+<b>4. </b>Academic Certificates</br>
+<b>5. </b>Professional Qualifications</br>
+<b>6. </b>Professional Bodies' Membership Certificates</br>
+<b>7. </b>Constitutional Documents</br>
+	  </p>
+	  <!-- Display the countdown timer in an element -->
+<p id="demo" style="font-weight:700; color:red;"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("april 16, 2021 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + " days " + hours + " hrs "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "APPLICATION PERIOD HAS EXPIRED";
+  }
+}, 1000);
+</script>
+    </div>
+    </div>
+</div>
+<!--
+  <h5 style="color:gray;">Copyright &copy; 2020 -- Kenya Bureau of Standards. </br>
+All Rights Reserved.</h5>
+</div>
+-->
+</body>
+</html>
