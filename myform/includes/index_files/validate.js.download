@@ -1,0 +1,181 @@
+function echeck(str) 
+	{
+		var at="@"
+		var dot="."
+		var lat=str.indexOf(at)
+		var lstr=str.length
+		var ldot=str.indexOf(dot)
+		if (str.indexOf(at)==-1)
+			{
+		   alert("Invalid E-mail ID")
+		   return false
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		   alert("Invalid E-mail ID")
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+			alert("Invalid E-mail ID")
+			return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+			alert("Invalid E-mail ID")
+			return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+			alert("Invalid E-mail ID")
+			return false
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+			alert("Invalid E-mail ID")
+			return false
+		 }
+		
+		 if (str.indexOf(" ")!=-1){
+			alert("Invalid E-mail ID")
+			return false
+		 }
+
+		 return true					
+	}
+
+
+function validateRegistration()
+	{
+
+	var fname = (document.frmReg.fname.value).replace(/(^[\s\xA0]+|[\s\xA0]+$)/g, '');	
+	var lname = (document.frmReg.lname.value).replace(/(^[\s\xA0]+|[\s\xA0]+$)/g, '');
+	var email = (document.frmReg.emailadd.value).replace(/(^[\s\xA0]+|[\s\xA0]+$)/g, '');
+	var usname = (document.frmReg.usname.value).replace(/(^[\s\xA0]+|[\s\xA0]+$)/g, '');	
+	var passwd = (document.frmReg.passwd.value).replace(/(^[\s\xA0]+|[\s\xA0]+$)/g, '');
+	var copasswd = (document.frmReg.copasswd.value).replace(/(^[\s\xA0]+|[\s\xA0]+$)/g, '');		
+	
+	if(fname.length < 1 )
+		{
+		alert("please enter your first name")
+		return false
+		}
+	else if(lname.length < 1 )
+		{
+		alert("please enter your last name")
+		return false
+		}				
+	else if (email.length < 1 )
+		{
+		alert("Please enter your email address")		
+		return false
+		}
+	else if (echeck(email)==false)
+		{
+		email =""
+		return false
+		}
+	else if(usname.length < 6 )
+		{
+		alert("please enter a username not less than six characters")
+		return false
+		}	
+	else if(passwd.length < 6 )
+		{
+		alert("please enter password not less than six characters")
+		return false
+		}	
+	else if(copasswd.length < 6 )
+		{
+		alert("please enter confirmation password not less than six characters")
+		return false
+		}		
+	else if(copasswd != passwd )
+		{
+		alert("The two passwords are not the same")
+		return false
+		}	
+				
+	else 
+		return true
+
+
+ }
+
+
+
+function validateBasic()
+	{
+
+	var phone = (document.frmBasic.phoneno.value).replace(/(^[\s\xA0]+|[\s\xA0]+$)/g, '');	
+	var address = (document.frmBasic.address.value).replace(/(^[\s\xA0]+|[\s\xA0]+$)/g, '');
+	var county = (document.frmBasic.county.value).replace(/(^[\s\xA0]+|[\s\xA0]+$)/g, '');
+	var town = (document.frmBasic.town.value).replace(/(^[\s\xA0]+|[\s\xA0]+$)/g, '');	
+	var gender = (document.frmBasic.gender.value).replace(/(^[\s\xA0]+|[\s\xA0]+$)/g, '');
+	
+	
+	if(phone.length < 1 )
+		{
+		alert("please enter your phone number")
+		return false
+		}
+	else if(address.length < 1 )
+		{
+		alert("please enter your address")
+		return false
+		}				
+	else if (county.length < 1 )
+		{
+		alert("Please select county")		
+		return false
+		}
+	
+	else if(town.length < 1 )
+		{
+		alert("please enter your current town")
+		return false
+		}	
+	else if(gender.length < 1 )
+		{
+		alert("please select gender")
+		return false
+		}		
+				
+	else 
+		return true
+
+
+ }
+
+function validatePwd()
+	{
+	var oldpwd = (document.frmPwd.oldpwd.value).replace(/(^[\s\xA0]+|[\s\xA0]+$)/g, '');	
+	var newpwd = (document.frmPwd.newpwd.value).replace(/(^[\s\xA0]+|[\s\xA0]+$)/g, '');
+	var copasswd = (document.frmPwd.conewpwd.value).replace(/(^[\s\xA0]+|[\s\xA0]+$)/g, '');		
+	
+	if(oldpwd.length < 6 )
+		{
+		alert("please enter your current password")
+		return false
+		}
+	else if(newpwd.length < 6 )
+		{
+		alert("please enter your new password, at least six characters")
+		return false
+		}				
+	else if (copasswd.length < 6 )
+		{
+		alert("Please confirm your password, at least six characters")	
+		return false
+		}
+	else if (newpwd != copasswd )
+		{
+		alert("The two passwords are not the same.")	
+		return false
+		}
+		
+	else 
+		return true
+		
+		
+	}
