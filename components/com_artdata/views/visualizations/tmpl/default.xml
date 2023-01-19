@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="ArtData Visualization" option="View">
+        <message>
+            Display an ArtData Visualization (chart or table).
+        </message>
+	</layout>
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request">
+
+			<field name="id" type="sql" default="" label="Visualization" description="Select ArtData Visualization" query="SELECT id, name from #__artdata_visualizations" key_field="id" value_field="name"/>
+			
+		</fieldset>
+	</fields>	
+</metadata>
