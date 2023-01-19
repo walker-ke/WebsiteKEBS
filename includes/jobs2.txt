@@ -1,0 +1,72 @@
+<table border="1" align="center" style="width:50%;">
+	<tr>
+<th>sn</th> 
+<th>address</th> 
+<th>firstname</th> 
+<th>lastname </th> 
+<th>gender </th> 
+<th>dob</th> 
+<th>nationality</th>  
+<th>county</th> 
+<th>postal_address</th> 
+<th>email</th> 
+<th>work_number </th> 
+<th>mobile</th> 
+<th>id_no </th> 
+<th>pin </th> 
+<th>disability</th> 
+<th>yesoption</th> 
+<th>degree</th> 
+<th>degree_state</th> 
+<th>masters</th> 
+<th>professional</th> 
+<th>work_experience</th> 
+<th>diploma</th> 
+<th>cover_letter</th> 
+<th>professional_paper</th> 
+<th>national_id </th> 
+<th>curriculum_vitae</th> 
+<th>date_Received</th> 
+
+</tr>
+<tr>
+<?php
+$con=mysqli_connect('kebsite.mysql.database.azure.com','kebsite@kebsite','k3bs@123','kebsite');
+$result = mysqli_query($con,"SELECT * FROM eu3nr_nqiapplicationform");
+while($row = mysqli_fetch_array($result))
+{
+echo "<td>".$row['sn']."</font></td>";
+echo "<td>".$row['address']."</font></td>";
+echo "<td>".$row['firstname']."</font></td>";
+echo "<td>".$row['lastname']."</font></td>";
+echo "<td>".$row['gender']."</font></td>";
+echo "<td>".$row['dob']."</font></td>";
+echo "<td>".$row['nationality']."</font></td>";
+echo "<td>".$row['county']."</font></td>";
+echo "<td>".$row['postal_address']."</font></td>";
+echo "<td>".$row['email']."</font></td>";
+echo "<td>".$row['work_number']."</font></td>";
+echo "<td>".$row['mobile']."</font></td>";
+echo "<td>".$row['id_no']."</font></td>";
+echo "<td>".$row['pin']."</font></td>";
+echo "<td>".$row['yesoption']."</font></td>";
+echo "<td>".$row['degree']."</font></td>";
+echo "<td>".$row['degree_state']."</font></td>";
+echo "<td>".$row['masters']."</font></td>";
+echo "<td>".$row['professional']."</font></td>";
+echo "<td>".$row['work_experience']."</font></td>";
+echo "<td>".$row['cover_letter']."</font></td>";
+echo "<td>".$row['professional_paper']."</font></td>";
+echo "<td>".$row['national_id']."</font></td>";
+echo "<td>".$row['curriculum_vitae']."</font></td>";
+echo "<td>".$row['date_Received']."</font></td>";
+
+$df="Jobs Application Details-Report";
+header("Content-Type: application/x-msdownload");
+header("Content-Disposition: attachment; filename='$df'.xls");
+header("Pragma: no-cache");
+header("Expires: 0");
+}
+echo "</table>";
+mysqli_close($con);
+?>
