@@ -1,0 +1,20 @@
+/** Translations - save UTF8 NO BOM **/
+var fr_screenreader='Screen Reader';
+var fr_screenreader_title='Ενεργοποιείστε το Screen Reader για να διαβάσετε την σελίδα'; 
+var fr_notext='Επιλέξτε κάποιο κείμενο.'; 
+var fr_paused='Παύση. Κάντε κλικ για συνέχεια.';
+var fr_increase='Αυξήστε';
+var fr_decrease='Μειώστε';
+var fr_reset='Επανεκίνηση';
+var fr_highcontrast='Εναλλαγή υψηλής αντίθεσης';
+var fr_screenreader_play='Εκίνηση';
+var fr_screenreader_pause='Παύση';
+var fr_screenreader_stop='Σταμάτημα';
+var fr_screenreader_font_increase='Αύξηση μεγέθους γραμματοσειράς';
+var fr_screenreader_font_decrease='Μείωση μεγέθους γραμματοσειράς';
+var fr_screenreader_font_reset='Επαναφορά γραμματοσειράς';
+var fr_screenreader_highcontrast='Υψηλή αντίθεση';
+var fr_screenreader_highcontrast2='Υψηλή αντίθεση2';
+var fr_screenreader_highcontrast3='Υψηλή αντίθεση3';
+var fr_dyslexic_title='Τα δυσλεξικά γραμματοσειράς';
+var fr_showskiptocontents_title="Μετάβαση στο περιεχόμενο"

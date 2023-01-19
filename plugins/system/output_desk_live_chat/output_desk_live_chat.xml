@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="system" method="upgrade">
+	<name>Output Desk Live Chat</name>
+	<author>Srimax</author>
+	<creationDate>March 2016</creationDate>
+	<copyright>Copyright (C) Srimax, India. All Rights Reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@outputdesk.com</authorEmail>
+	<authorUrl>http://www.outputdesk.com/</authorUrl>
+	<version>1.0.1</version>
+	<description>PLG_OUTPUT_DESK_LIVE_CHAT_DESCRIPTION</description>
+	<files>
+		<filename plugin="output_desk_live_chat">output_desk_live_chat.php</filename>
+        <folder>helper</folder>
+	</files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB.plg_system_output_desk_live_chat.ini</language>
+        <language tag="en-GB">en-GB.plg_system_output_desk_live_chat.sys.ini</language>
+    </languages>
+	<config addfieldpath="/plugins/system/output_desk_live_chat/helper">
+	<fields name="params">
+		<fieldset name="main" label="Output Desk settings">
+			<field name="outputdeskaccount" type="outputdeskaccount" label=" " description="" default="" />
+			<field name="message" type="hidden" label="" description="" default="" />
+			<field name="name" type="hidden" label="" description="" default="" />
+			<field name="plan" type="hidden" label="" description="" default="" />
+			<field name="code" type="hidden" label="" description="" default="" />
+		</fieldset>
+	</fields>
+	</config>
+</extension>
