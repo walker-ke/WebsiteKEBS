@@ -1,0 +1,22 @@
+<?php
+
+
+class connection {
+
+    var $conn;
+
+    function __construct() {
+           $this->conn =mysql_connect("localhost","kebs_kebsdbs","j3.2;NL,$vP7"); 
+        //$this->conn = mysqli_connect("localhost", "kebs", "kebs123", "kkebs");
+         mysql_select_db( "kebs_kebsmain", $this->conn);
+         
+        
+          //  $this->conn =mysql_connect("localhost","kebske_dolala","m*&xR515=!");   
+  // mysql_select_db("kkebs",$this->conn);
+   }
+
+    function connectionClose() {
+        mysql_close($this->conn);
+    }
+
+}
